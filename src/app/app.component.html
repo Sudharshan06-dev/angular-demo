@@ -1,17 +1,15 @@
 <body>
-  <div class="sidebar">
-    <h2>Sidebar</h2>
-    <p>Navigation links go here</p>
+<app-sidebar-nav/>
+
+<div class="main-content">
+  <app-main-header/>
+  <div class="body">
+    <p>Body content goes here</p>
   </div>
-  <div class="main-content">
-    <div class="header">
-      <h1>Main Header</h1>
-    </div>
-    <div class="body">
-      <p>Body content goes here</p>
-    </div>
-    <app-footer/>
-  </div>
+  <app-footer/>
+
+</div>
 </body>
 
-<router-outlet />
+
+<router-outlet/>

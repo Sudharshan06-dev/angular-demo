@@ -5,7 +5,14 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './footer.component.html',
-  styles: `.social-links {
+  styles: `
+    .footer {
+    padding: 10px;
+    background-color: var(--gray-700);
+    text-align: center;
+    color: white;
+  }
+  .social-links {
     align-items: center;
     gap: 0.73rem;
     position: relative;
