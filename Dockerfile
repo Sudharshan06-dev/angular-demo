@@ -2,7 +2,7 @@
 FROM nginx:latest
 
 # Copy built Angular files to the Nginx HTML folder
-COPY ./src/* /usr/share/nginx/html
+COPY ./docs/* /usr/share/nginx/html
 
 # Expose port 80 to the Docker host
 EXPOSE 80
