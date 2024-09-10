@@ -1,8 +1,8 @@
-# Use the official Nginx base image
-FROM nginx:latest
+# Use the official Apache HTTP Server image from the Docker Hub
+FROM httpd:latest
 
-# Copy built Angular files to the Nginx HTML folder
-COPY ./docs/* /usr/share/nginx/html
+# Copy a custom 'index.html' into the Apache server's root directory for hosting
+COPY ./docs/* /usr/local/apache2/htdocs/
 
 # Expose port 80 to the Docker host
 EXPOSE 80
