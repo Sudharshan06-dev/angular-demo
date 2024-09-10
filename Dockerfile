@@ -7,5 +7,5 @@ COPY ./docs/* /usr/local/apache2/htdocs/
 # Expose port 80 to the Docker host
 EXPOSE 80
 
-# Start Nginx when the container launches
-CMD ["nginx", "-g", "daemon off;"]
+# Start Apache when the container launches
+CMD ["httpd-foreground"]
