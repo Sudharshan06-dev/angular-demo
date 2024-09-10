@@ -1,11 +1,11 @@
-# Use the official Apache HTTP Server image from the Docker Hub
-FROM httpd:latest
+FROM node:alpine
 
-# Copy a custom 'index.html' into the Apache server's root directory for hosting
-COPY ./docs/* /usr/local/apache2/htdocs/
+WORKDIR /src/app
 
-# Expose port 80 to the Docker host
-EXPOSE 80
+COPY . /usr/src/app
 
-# Start Apache when the container launches
-CMD ["httpd-foreground"]
+RUN npm install -g @angular/cli
+
+RUN npm install
+
+CMD ["ng", "serve", "--host", "0.0.0.0"]
