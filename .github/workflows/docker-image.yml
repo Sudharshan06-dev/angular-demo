@@ -20,4 +20,4 @@ jobs:
           ls -la
           docker build . -f Dockerfile -t msudharshan06/angular-demo:latest
       - name: Push the Docker image
-        run: docker push ${{ secrets.DOCKERHUB_USERNAME }}/angular-demo:latest
+        run: docker push msudharshan06/angular-demo:latest
