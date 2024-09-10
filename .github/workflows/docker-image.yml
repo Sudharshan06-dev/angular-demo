@@ -2,7 +2,7 @@ name: Angular demo image
 on:
   push:
     branches:
-      - main
+      - master
 jobs:
     build:
       name: push docker image to docker hub
